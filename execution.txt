@@ -1,0 +1,20 @@
+SQL> CREATE TABLE EMPLAB4(EmpNo NUMBER(4), EName VARCHAR2(20), job VARCHAR2(20), MGR NUMBER(4), HIREDate DATE, SAL NUMBER(4),COMM NUMBER(4),DEPTNO NUMBER(2));
+
+Table created.
+
+SQL> RENAME EMPLAB4 TO EMP;
+
+Table renamed.
+
+SQL> SELECT LTRIM(E_NAME,'S') FROM EMP;
+SELECT LTRIM(E_NAME,'S') FROM EMP
+             *
+ERROR at line 1:
+ORA-00904: "E_NAME": invalid identifier 
+
+
+SQL> SELECT LTRIM(ENAME,'S') FROM EMP;
+
+no rows selected
+
+SQL> 
